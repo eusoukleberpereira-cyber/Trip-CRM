@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { memo, useState } from 'react';
 import {
   User,

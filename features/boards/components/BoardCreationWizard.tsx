@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Sparkles, Loader2, Send, MessageSquare, LayoutTemplate, AlertCircle, Settings, Plus } from 'lucide-react';
 import { useRouter } from 'next/navigation';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useMemo, useState } from 'react';
 import { Copy, ExternalLink, Mail, MessageCircle, Sparkles, Loader2, AlertCircle } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';

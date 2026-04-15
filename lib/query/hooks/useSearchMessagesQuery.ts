@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * @fileoverview Search Messages Query Hook
  *

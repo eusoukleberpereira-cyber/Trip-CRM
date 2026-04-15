@@ -1,5 +1,8 @@
+'use client';
+
 import React, { lazy, Suspense, useState } from 'react';
-import { Link, useLocation, NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
   KanbanSquare,
@@ -11,14 +14,12 @@ import {
   Inbox,
   Sparkles,
   LogOut,
-  User,
   Bug,
   CheckSquare,
   PanelLeftClose,
   PanelLeftOpen
 } from 'lucide-react';
 
-import { useCRM } from '../context/CRMContext';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { prefetchRoute, RouteName } from '@/lib/prefetch';
@@ -39,6 +40,7 @@ const NavItem = ({
   prefetch,
   clickedPath,
   onItemClick,
+  sidebarCollapsed,
 }: {
   to: string;
   icon: React.ComponentType<{ size?: number }>;
@@ -46,42 +48,37 @@ const NavItem = ({
   prefetch?: RouteName;
   clickedPath?: string;
   onItemClick?: (path: string) => void;
+  sidebarCollapsed?: boolean;
 }) => {
-  const location = useLocation();
+  const pathname = usePathname();
+  const isActive =
+    pathname === to ||
+    (to === '/boards' && pathname === '/pipeline') ||
+    clickedPath === to;
 
   return (
-    <NavLink
-      to={to}
+    <Link
+      href={to}
       onMouseEnter={prefetch ? () => prefetchRoute(prefetch) : undefined}
       onClick={() => onItemClick?.(to)}
-      className={({ isActive, isPending }) => {
-        const wasJustClicked = clickedPath === to;
-
-        const active =
-          isActive ||
-          isPending ||
-          wasJustClicked ||
-          (to === '/boards' && location.pathname === '/pipeline');
-
-        return `flex items-center gap-3 px-4 py-2 rounded-lg text-sm ${
-          active
-            ? 'bg-primary-500/10 text-primary-600'
-            : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-white/5'
-        }`;
-      }}
+      className={`flex items-center gap-3 px-4 py-2 rounded-lg text-sm ${
+        isActive
+          ? 'bg-primary-500/10 text-primary-600'
+          : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-white/5'
+      }`}
     >
       <Icon size={18} />
-      <span>{label}</span>
-    </NavLink>
+      {!sidebarCollapsed && <span>{label}</span>}
+    </Link>
   );
 };
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { darkMode, toggleDarkMode } = useTheme();
-  const { isGlobalAIOpen, setIsGlobalAIOpen, sidebarCollapsed, setSidebarCollapsed } = useCRM();
   const { profile, signOut } = useAuth();
 
-  const location = useLocation();
+  const [isGlobalAIOpen, setIsGlobalAIOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [clickedPath, setClickedPath] = useState<string>();
   const [debugEnabled, setDebugEnabled] = useState(isDebugMode);
 
@@ -124,6 +121,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <NavItem
               key={item.to}
               {...item}
+              sidebarCollapsed={sidebarCollapsed}
               clickedPath={clickedPath}
               onItemClick={setClickedPath}
             />
@@ -165,7 +163,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           </header>
 
-          {/* 🔥 ÁREA PRINCIPAL CORRIGIDA */}
+          {/* ÁREA PRINCIPAL */}
           <main
             id="main-content"
             className="flex-1 overflow-hidden"

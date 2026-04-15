@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { useMemo, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { useAIFeatureFlags, useSetAIFeatureFlag } from '@/lib/query/hooks/useOrgSettingsQuery';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Activity } from '@/types';
 import { CheckCircle2, Clock, Calendar, Phone, Mail, FileText, Building2, MoreHorizontal, X, SkipForward } from 'lucide-react';

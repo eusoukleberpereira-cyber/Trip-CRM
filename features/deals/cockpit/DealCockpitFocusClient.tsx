@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUIState } from '@/store/uiState';

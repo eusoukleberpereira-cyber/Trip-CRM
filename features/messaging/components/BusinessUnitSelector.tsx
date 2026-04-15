@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { memo, useState, useMemo, useEffect, useCallback } from 'react';
 import { Building2, ChevronDown, Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';

@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * @fileoverview AI Metrics Section
  *

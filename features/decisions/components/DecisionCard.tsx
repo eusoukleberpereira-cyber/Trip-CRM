@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Decision Card Component
  * Card individual para uma decisão na fila

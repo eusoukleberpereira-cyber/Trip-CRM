@@ -10,6 +10,14 @@ const repoRoot = configDir.includes('/.claude/worktrees/')
   : configDir;
 
 const nextConfig: NextConfig = {
+  outputFileTracingExcludes: {
+    '*': [
+      './context/**',
+      './components/ui/**',
+      './hooks/**',
+      './lib/a11y/**',
+    ],
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: '*.supabase.co' },

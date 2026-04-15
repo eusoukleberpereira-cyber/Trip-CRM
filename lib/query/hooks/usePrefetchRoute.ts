@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import { useCallback } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useAuth } from '@/context/AuthContext';

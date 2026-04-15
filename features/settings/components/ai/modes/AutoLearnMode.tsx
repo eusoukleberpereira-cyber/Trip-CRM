@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 /**
  * @fileoverview Auto Learn Mode Component
  *

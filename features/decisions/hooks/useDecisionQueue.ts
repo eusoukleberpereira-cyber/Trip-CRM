@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * useDecisionQueue Hook
  * Hook principal para gerenciar a fila de decisões

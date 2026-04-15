@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { useState, useCallback } from 'react';
 import { X, GitMerge, Phone, Mail, Check } from 'lucide-react';
 import { FocusTrap } from '@/lib/a11y';

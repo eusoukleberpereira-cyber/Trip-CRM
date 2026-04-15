@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { ChevronDown, Plus, Settings, Trash2 } from 'lucide-react';
 import { Board } from '@/types';

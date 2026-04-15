@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { DealDetailModal } from './Modals/DealDetailModal';
 import { CreateDealModal } from './Modals/CreateDealModal';

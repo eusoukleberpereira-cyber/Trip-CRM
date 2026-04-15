@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Phone, Users, Mail, CheckSquare } from 'lucide-react';
 import { Activity, Deal } from '@/types';

@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { useState, useMemo } from 'react';
 import { Search, Send, ChevronDown, ChevronUp, X, FileText, CheckCircle, Clock, XCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef, useId } from 'react';
 import { X, ThumbsDown, DollarSign, Users, Clock, HelpCircle } from 'lucide-react';
 import { FocusTrap, useFocusReturn } from '@/lib/a11y';

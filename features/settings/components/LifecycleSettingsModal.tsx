@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useId } from 'react';
 import { X, Plus, Trash2, ArrowUp, ArrowDown, Check } from 'lucide-react';
 import { useLifecycleStages, useCreateLifecycleStage, useUpdateLifecycleStage, useDeleteLifecycleStage, useReorderLifecycleStages } from '@/lib/query/hooks/useLifecycleStagesQuery';

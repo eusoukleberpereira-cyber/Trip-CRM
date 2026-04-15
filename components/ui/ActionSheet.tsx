@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * ActionSheet (bottom sheet) — Apple-like fallback UI for choices/advanced actions.
  *

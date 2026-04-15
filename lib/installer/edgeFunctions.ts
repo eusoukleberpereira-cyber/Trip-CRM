@@ -699,7 +699,7 @@ export async function resolveSupabaseDbUrlViaCliLoginRole(params: {
 
 
 export async function readVerifyJwtBySlug(
-  configTomlPath = path.resolve(process.cwd(), 'supabase/config.toml')
+  configTomlPath = path.resolve(/*turbopackIgnore: true*/ process.cwd(), 'supabase/config.toml')
 ): Promise<VerifyJwtBySlug> {
   const map: VerifyJwtBySlug = new Map();
   const raw = await fs.readFile(configTomlPath, 'utf8').catch(() => '');
@@ -763,7 +763,7 @@ async function listFilesRecursive(
 }
 
 export async function listEdgeFunctionSlugs(
-  functionsRootDir = path.resolve(process.cwd(), 'supabase/functions')
+  functionsRootDir = path.resolve(/*turbopackIgnore: true*/ process.cwd(), 'supabase/functions')
 ): Promise<string[]> {
   const entries = await fs.readdir(functionsRootDir, { withFileTypes: true }).catch(() => []);
   const slugs: string[] = [];
@@ -854,7 +854,7 @@ export async function deploySupabaseEdgeFunction(params: {
   functionsRootDir?: string;
   verifyJwtBySlug?: VerifyJwtBySlug;
 }): Promise<SupabaseFunctionDeployResult> {
-  const functionsRootDir = params.functionsRootDir ?? path.resolve(process.cwd(), 'supabase/functions');
+  const functionsRootDir = params.functionsRootDir ?? path.resolve(/*turbopackIgnore: true*/ process.cwd(), 'supabase/functions');
   const functionDir = path.join(functionsRootDir, params.slug);
 
   const hasIndexTs = await existsFile(path.join(functionDir, 'index.ts'));
@@ -906,9 +906,9 @@ export async function deployAllSupabaseEdgeFunctions(params: {
   functionsRootDir?: string;
   configTomlPath?: string;
 }): Promise<SupabaseFunctionDeployResult[]> {
-  const functionsRootDir = params.functionsRootDir ?? path.resolve(process.cwd(), 'supabase/functions');
+  const functionsRootDir = params.functionsRootDir ?? path.resolve(/*turbopackIgnore: true*/ process.cwd(), 'supabase/functions');
   const verifyJwtBySlug = await readVerifyJwtBySlug(
-    params.configTomlPath ?? path.resolve(process.cwd(), 'supabase/config.toml')
+    params.configTomlPath ?? path.resolve(/*turbopackIgnore: true*/ process.cwd(), 'supabase/config.toml')
   );
   const slugs = await listEdgeFunctionSlugs(functionsRootDir);
 

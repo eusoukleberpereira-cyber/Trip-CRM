@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo, useState, useId } from 'react';
 import { Plus, GripVertical, Trash2, ChevronDown, Settings, Copy, Bot } from 'lucide-react';
 import { Board, BoardStage, ContactStage } from '@/types';

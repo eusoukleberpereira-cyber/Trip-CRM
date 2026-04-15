@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useCreateDealWithContact } from '@/lib/query/hooks/useDealsQuery';
 import { useBoards } from '@/lib/query/hooks/useBoardsQuery';

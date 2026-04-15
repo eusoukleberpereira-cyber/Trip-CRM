@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Reusable form field components with consistent styling, error handling, and ARIA accessibility
  *

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useDeals } from '@/lib/query/hooks/useDealsQuery';
 import { useContacts } from '@/lib/query/hooks/useContactsQuery';

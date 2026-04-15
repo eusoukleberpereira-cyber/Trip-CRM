@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { AlertTriangle, TrendingUp, UserX, ArrowRight, Sparkles, Target } from 'lucide-react';

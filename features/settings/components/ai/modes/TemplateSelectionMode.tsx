@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 /**
  * @fileoverview Template Selection Mode Component
  *

@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * useAIEnabled Hook - Verifica se IA está habilitada
  * 

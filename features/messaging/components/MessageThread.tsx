@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 import { format, isSameDay } from 'date-fns';
 import { ptBR } from 'date-fns/locale';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useId, useState } from 'react';
 import { X } from 'lucide-react';
 import { Contact } from '@/types';

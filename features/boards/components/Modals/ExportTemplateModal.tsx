@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useMemo, useState } from 'react';
 import { Copy, Download, ArrowUp, ArrowDown } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';

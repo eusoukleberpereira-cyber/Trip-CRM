@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * @fileoverview Contexto de Tema (Dark Mode)
  * 

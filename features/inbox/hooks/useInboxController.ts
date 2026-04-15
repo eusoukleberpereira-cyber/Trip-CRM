@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Activity, Deal, DealView, Contact } from '@/types';
 import type { ParsedAction } from '@/types/aiActions';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo, useState } from 'react';
 import { Download, Upload, FileDown } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';

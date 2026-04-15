@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { memo, useMemo, useState, useEffect, useCallback } from 'react';
 import { Clock, AlertTriangle, XCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';

@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Script Editor Modal
  * CRUD interface for user custom scripts

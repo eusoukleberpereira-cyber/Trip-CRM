@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { memo, useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { format } from 'date-fns';
 import { Check, CheckCheck, Clock, AlertCircle, FileText, MapPin, Play, Pause, Image, Reply } from 'lucide-react';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useId } from 'react';
 import { X, LayoutGrid } from 'lucide-react';
 import { Board } from '@/types';

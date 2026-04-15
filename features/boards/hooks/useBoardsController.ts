@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { DealView, Board, CustomFieldDefinition } from '@/types';

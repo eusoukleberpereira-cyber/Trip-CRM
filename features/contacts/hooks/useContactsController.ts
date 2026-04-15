@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useToast } from '@/context/ToastContext';

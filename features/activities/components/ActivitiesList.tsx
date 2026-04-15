@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import { Activity, Deal, Contact, Company } from '@/types';
 import { ActivityRow } from './ActivityRow';

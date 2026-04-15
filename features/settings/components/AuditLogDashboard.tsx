@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Audit Log Dashboard Component
  * T046: Create AuditLogDashboard Component

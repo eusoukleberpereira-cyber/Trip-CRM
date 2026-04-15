@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useCallback, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { DealView, CustomFieldDefinition, BoardStage } from '@/types';

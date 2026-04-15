@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { useOrgSettings, useUpdateAISettings, useUpdateUserSettings } from '@/lib/query/hooks/useOrgSettingsQuery';
 import { Bot, Key, CheckCircle, AlertCircle, Loader2, Save, Trash2, ChevronDown, ChevronUp, Shield, RefreshCw } from 'lucide-react';

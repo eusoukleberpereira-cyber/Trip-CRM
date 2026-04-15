@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import React, { useState, useMemo, useCallback, memo } from 'react';
 import { Search, Filter, Inbox, CheckCircle, X } from 'lucide-react';
 import { cn } from '@/lib/utils';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useId, useState } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { StageAIConfig } from '@/features/settings/components/StageAIConfig';

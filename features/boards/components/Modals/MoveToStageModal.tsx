@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useCallback, useId, useMemo } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';

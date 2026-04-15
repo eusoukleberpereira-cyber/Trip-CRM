@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Building2, Mail, Phone, Plus, Calendar, Pencil, Trash2, Globe, MoreHorizontal, ArrowUpDown, ArrowUp, ArrowDown, GitMerge, Users } from 'lucide-react';
 import { Contact, Company, ContactSortableColumn } from '@/types';
